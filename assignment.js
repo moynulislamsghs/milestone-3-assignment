@@ -1,12 +1,13 @@
+// https://github.com/moynulislamsghs/milestone-3-assignment/blob/main/assignment.js
 
 // kilometer to meter starts here
 function kilometerToMeter(km) {
-    let result;
+    let meter;
     if(km < 0){
         return "sorry, you entered a negative number.";
     }
-    result = km * 1000;
-    return result;
+    meter = km * 1000;
+    return meter;
 }
 console.log(kilometerToMeter(11.5));
 // end of kilometer to meter 
@@ -16,8 +17,8 @@ function budgetCalculator(numberOfWatch, numberOfPhone, numberOfLaptop){
     if (numberOfWatch < 0 || numberOfPhone < 0 || numberOfLaptop < 0){
         return "Sorry, you entered a negative number.";
     }
-    let result = (numberOfWatch * 50) + (numberOfPhone * 100) + (numberOfLaptop * 500);
-    return result;
+    let totalBudget = (numberOfWatch * 50) + (numberOfPhone * 100) + (numberOfLaptop * 500);
+    return totalBudget;
 }
 console.log(budgetCalculator(4,2,1));
 // end of budget calculator
@@ -46,19 +47,24 @@ function hotelCost(numberOfDays){
         return "Sorry, you entered a negative number.";
     }
 }
-console.log(hotelCost(10));
+console.log(hotelCost(30));
 // end of hotel cost
 
 // mega friend starts here
 function megaFriend(friends){
     let i,temp=0, biggestFriend;
-    for(i=0;i<friends.length;i++){
-        if(friends[i].length > temp){
-            temp = friends[i].length;
-            biggestFriend = friends[i];
+    if(Array.isArray(friends) == true){
+        for(i=0;i<friends.length;i++){
+            if(friends[i].length > temp){
+                temp = friends[i].length;
+                biggestFriend = friends[i];
+            }
         }
+        return biggestFriend;
     }
-    return biggestFriend;
+    else{
+        return "Please enter an array.";
+    }
 }
 console.log(megaFriend(["ashik", "hrioy", "mustafizur", "anik"]));
 // end of mega friend
