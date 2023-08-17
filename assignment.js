@@ -1,4 +1,4 @@
-// https://github.com/moynulislamsghs/milestone-3-assignment/blob/main/assignment.js
+// https://github.com/moynulislamsghs/milestone-3-assignment
 
 // kilometer to meter starts here
 function kilometerToMeter(km) {
