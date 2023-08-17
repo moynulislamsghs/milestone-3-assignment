@@ -1,5 +1,5 @@
 
-// kilometer to meter starts
+// kilometer to meter starts here
 function kilometerToMeter(km) {
     let result;
     if(km < 0){
@@ -11,7 +11,7 @@ function kilometerToMeter(km) {
 console.log(kilometerToMeter(11.5));
 // end of kilometer to meter 
 
-// budget calculator starts
+// budget calculator starts here
 function budgetCalculator(numberOfWatch, numberOfPhone, numberOfLaptop){
     if (numberOfWatch < 0 || numberOfPhone < 0 || numberOfLaptop < 0){
         return "Sorry, you entered a negative number.";
@@ -22,7 +22,7 @@ function budgetCalculator(numberOfWatch, numberOfPhone, numberOfLaptop){
 console.log(budgetCalculator(4,2,1));
 // end of budget calculator
 
-// hotel cost starts
+// hotel cost starts here
 function hotelCost(numberOfDays){
     let totalCost, firstTenDays, secondTenDays, remainingDays;
     if(numberOfDays > 20){
@@ -48,3 +48,17 @@ function hotelCost(numberOfDays){
 }
 console.log(hotelCost(10));
 // end of hotel cost
+
+// mega friend starts here
+function megaFriend(friends){
+    let i,temp=0, biggestFriend;
+    for(i=0;i<friends.length;i++){
+        if(friends[i].length > temp){
+            temp = friends[i].length;
+            biggestFriend = friends[i];
+        }
+    }
+    return biggestFriend;
+}
+console.log(megaFriend(["ashik", "hrioy", "mustafizur", "anik"]));
+// end of mega friend
